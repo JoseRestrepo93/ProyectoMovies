@@ -1,0 +1,192 @@
+[
+  {
+    "ContainingType": "ProyectoMovies.Controllers.BoletosController",
+    "Method": "ComprarBoleto",
+    "RelativePath": "api/Boletos",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuevoBoleto",
+        "Type": "ProyectoMovies.Modelos.Boleto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.BoletosController",
+    "Method": "ObtenerBoletoPorId",
+    "RelativePath": "api/Boletos/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.BoletosController",
+    "Method": "VerificarEstadoAsientos",
+    "RelativePath": "api/Boletos/estado/{idFuncion}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idFuncion",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.FuncionesController",
+    "Method": "RegistrarFuncion",
+    "RelativePath": "api/Funciones",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuevaFuncion",
+        "Type": "ProyectoMovies.Modelos.Funcion",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.FuncionesController",
+    "Method": "ObtenerFunciones",
+    "RelativePath": "api/Funciones",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.FuncionesController",
+    "Method": "ObtenerFuncionPorId",
+    "RelativePath": "api/Funciones/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.FuncionesController",
+    "Method": "CancelarFuncion",
+    "RelativePath": "api/Funciones/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.PeliculasController",
+    "Method": "CrearPelicula",
+    "RelativePath": "api/Peliculas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuevaPelicula",
+        "Type": "ProyectoMovies.Modelos.Pelicula",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.PeliculasController",
+    "Method": "ObtenerPeliculas",
+    "RelativePath": "api/Peliculas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.PeliculasController",
+    "Method": "ObtenerPeliculaPorId",
+    "RelativePath": "api/Peliculas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.SalasController",
+    "Method": "RegistrarSala",
+    "RelativePath": "api/Salas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nuevaSala",
+        "Type": "ProyectoMovies.Modelos.Sala",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.SalasController",
+    "Method": "ObtenerSalas",
+    "RelativePath": "api/Salas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProyectoMovies.Controllers.SalasController",
+    "Method": "ObtenerSalaPorId",
+    "RelativePath": "api/Salas/{idSala}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idSala",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
