@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using ProyectoMovies.Datos;
 using ProyectoMovies.Modelos;
 
 namespace ProyectoMovies.Controllers
@@ -7,38 +9,46 @@ namespace ProyectoMovies.Controllers
     [Route("api/[controller]")]
     public class FuncionesController : ControllerBase
     {
-        private static List<Funcion> funciones = new List<Funcion>();
+        private readonly BdMoviesContext _context;
+
+        public FuncionesController(BdMoviesContext context)
+        {
+            _context = context;
+        }
 
         [HttpPost]
-        public IActionResult RegistrarFuncion([FromBody] Funcion nuevaFuncion)
+        public async Task<IActionResult> RegistrarFuncion([FromBody] Funcion nuevaFuncion)
         {
-            funciones.Add(nuevaFuncion);
+            _context.Funciones.Add(nuevaFuncion);
+            await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(ObtenerFuncionPorId), new { id = nuevaFuncion.Id }, nuevaFuncion);
         }
 
         [HttpGet("{id}")]
-        public IActionResult ObtenerFuncionPorId(int id)
+        public async Task<IActionResult> ObtenerFuncionPorId(int id)
         {
-            var funcion = funciones.FirstOrDefault(f => f.Id == id);
+            var funcion = await _context.Funciones.FindAsync(id);
             if (funcion == null)
                 return NotFound();
             return Ok(funcion);
         }
 
         [HttpGet]
-        public IActionResult ObtenerFunciones()
+        public async Task<IActionResult> ObtenerFunciones()
         {
+            var funciones = await _context.Funciones.ToListAsync();
             return Ok(funciones);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult CancelarFuncion(int id)
+        public async Task<IActionResult> CancelarFuncion(int id)
         {
-            var funcion = funciones.FirstOrDefault(f => f.Id == id);
+            var funcion = await _context.Funciones.FindAsync(id);
             if (funcion == null)
                 return NotFound();
 
-            funciones.Remove(funcion);
+            _context.Funciones.Remove(funcion);
+            await _context.SaveChangesAsync();
             return NoContent();
         }
     }
